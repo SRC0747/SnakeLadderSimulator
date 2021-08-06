@@ -11,10 +11,13 @@ public class SnakeLadderSimulator {
             int place = (int) Math.floor(Math.random()) % 3;
             System.out.println("Position is:" + place);
             if (place == 1) {
-                position1 = position1+randomCheck;
+                if ((position1 + randomCheck) <= 100)
+                {
+                    position1 = position1 + randomCheck;
+                }
             }
             if (place == 2) {
-                position1 = position1-randomCheck;
+                position1 = position1 - randomCheck;
                 if (position1 < 0)
                 {
                     position1 = 0;
